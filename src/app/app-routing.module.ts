@@ -6,19 +6,12 @@ import {UpdateProductComponent} from './product/update-product/update-product.co
 import {DeleteProductComponent} from './product/delete-product/delete-product.component';
 
 
-const routes: Routes = [{
-  path: 'create-product',
-  component: CreateProductComponent
-}, {
-  path: 'list-product',
-  component: ListProductComponent
-}, {
-  path: 'update-product/:id',
-  component: UpdateProductComponent
-}, {
-  path: 'delete-product/:id',
-  component: DeleteProductComponent
-}];
+const routes: Routes = [
+  {
+    path: 'products',
+    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
