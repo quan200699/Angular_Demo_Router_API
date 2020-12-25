@@ -1,0 +1,15 @@
+<h1>Create New Category</h1>
+<form (ngSubmit)="createCategory()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" name="name" [(ngModel)]="category.name"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>

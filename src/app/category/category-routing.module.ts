@@ -1,8 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {CreateCategoryComponent} from './create-category/create-category.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'create',
+    component: CreateCategoryComponent
+  }
+];
 
 @NgModule({
   imports: [
