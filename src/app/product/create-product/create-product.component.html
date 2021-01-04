@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="card-body">
-          <form (ngSubmit)="createProduct()">
+          <form (ngSubmit)="submit()">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" [(ngModel)]="product.name" class="form-control">
@@ -32,6 +32,11 @@
                 <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>
               </select>
             </div>
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="file" id="image" class="form-control" (change)="showPreview($event)"/>
+            </div>
+<!--            <img [src]="selectedImage" alt="loi anh"  (click)="fileUpload.click()">-->
             <div class="row">
               <div class="col-12">
                 <a href="#" class="btn btn-secondary">Cancel</a>
